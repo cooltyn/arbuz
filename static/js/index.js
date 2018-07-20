@@ -14,13 +14,12 @@ window.addEventListener('load', function() {
 				var r_e = length_e/(2*Math.PI);
 				var r_m = Math.max(0, Math.sqrt(Math.pow(length_m,2)/(2*Math.pow(Math.PI,2))-Math.pow(r_e,2)));
 				var v = Math.PI*Math.pow(r_e,2)*r_m*4/3;
-				console.log(mass, length_e, length_m, r_e, r_m, v);
-				return (mass/v).toFixed(3) || null;
+				var d = mass/v;
+				if(isFinite(d)) {
+					return d.toFixed(3);
+				}
+				// console.log(mass, length_e, length_m, r_e, r_m, v);
 			}
 		}
 	})
-	var r_e = 7;
-	var length_m = 65.6;
-	var r_m = Math.sqrt(Math.pow(length_m,2)/(2*Math.pow(Math.PI,2))-Math.pow(r_e,2));
-	console.log(r_m)
 })
