@@ -20,7 +20,7 @@ input {
 	display: block;
 	background: none;
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #aaa;
 	color: #fff;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
@@ -28,6 +28,6 @@ input {
 	margin-bottom: 20px;
 	outline: 0;
 }
-.result {
-	
+input:focus {	
+	border-bottom-color: #fff;
 }
