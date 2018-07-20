@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
 				var r_m = Math.max(0, Math.sqrt(Math.pow(length_m,2)/(2*Math.pow(Math.PI,2))-Math.pow(r_e,2)));
 				var v = Math.PI*Math.pow(r_e,2)*r_m*4/3;
 				var d = mass/v;
-				if(isFinite(d)) {
+				if(isFinite(d) && d!=0) {
 					return d.toFixed(3);
 				}
 				// console.log(mass, length_e, length_m, r_e, r_m, v);
